@@ -323,7 +323,7 @@ footer {
 
 @media screen and (max-width: 1000px) {
   .art-photo img {
-    height: 100vh;
+    height: 750px;
     width: auto;
     margin-left: 50%;
     -webkit-transform: translateX(-50%);
@@ -363,13 +363,13 @@ footer {
     display: block;
     position: relative;
     left: 10px;
-    top: 50px;
+    top: 75px;
     width: 25px;
     height: 25px;
     cursor: pointer;
   }
   .nav-list .first-nav-li {
-    margin-top: 75px;
+    margin-top: 100px;
   }
   .nav-list li {
     opacity: 0;
