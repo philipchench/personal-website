@@ -158,19 +158,28 @@ footer{
         z-index: -10;
     }
 }
-.art-about{      
+.art-about-container{
     position: absolute;
-    top: 200px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+}
+.art-about{   
     color: white;
-    max-width: 1200px;
     margin: auto;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;   
+    max-width: 1200px;
     p{
         margin: 2em 10em;
     }
     h1{
         font-weight: 100;
-        margin: 2em 6em;
+        margin: 0 6em;
     }
 }
 
@@ -194,7 +203,7 @@ footer{
         font-size: 0.75em;
     }
     p{
-        margin-top: 10px;
+        margin: 10px;
     }
     .work-link{
         display: inline-block;
@@ -210,8 +219,7 @@ footer{
 }
 
 .contact-form{
-    width: 50%;
-    max-width: 600px;
+    width: 600px;
     margin: auto;
     label{
         margin-left: 10px;
@@ -303,18 +311,46 @@ footer{
         cursor: pointer;
     }
 
-    .main-about p, .art-about h1, .art-about p{
+    .main-about p, .art-about p{
         margin: 2em 4em;
+        font-size: 0.8em;
     }
-    .work-img{
-        width: 275px;
+    .art-about h1{
+        margin: 0 4em;
     }
-    .work-text{
-        max-width: 15em;
+    .copyright{
+        font-size: 0.5em;
+    }
+    .contact-form{
+        width: 75%;
     }
 
 
 }//end of mobile
+
+@media screen and (max-width: 550px){//work text and img adjustments
+    .work-text{
+        max-width: 20em;
+        font-size: 0.8em;
+    }
+    .work-img{
+        width: 275px;
+    }
+}
+
+@media screen and (max-width: 300px){//stupid mini widths
+    .main-about p{
+        margin: 1em 10px;
+    }
+    .art-about{
+        p, h1{
+            margin: 1em 10px;
+        }
+    }
+    .work-img{
+        width: 90%;
+    }
+}
 
 .nav-active{
     transform: translateX(0%);
