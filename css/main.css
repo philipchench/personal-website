@@ -345,8 +345,8 @@ footer {
     position: absolute;
     right: 0px;
     background-color: #e9e6dd;
-    height: 50vh;
-    top: -5vh;
+    height: 20rem;
+    top: -2rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
