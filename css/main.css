@@ -290,6 +290,11 @@ footer {
   border-radius: 4%;
 }
 
+.mern-img {
+  -webkit-filter: contrast(105%);
+          filter: contrast(105%);
+}
+
 .contact-form {
   width: 600px;
   margin: auto;
