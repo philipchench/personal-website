@@ -10,6 +10,7 @@ font-family: 'Hahmlet', serif;
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -22,7 +23,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: 'Hahmlet', serif;
+  font-family: "Hahmlet", serif;
   font-weight: 400;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -124,8 +125,8 @@ body {
 }
 
 section {
-  min-height: 75vh;
-  font-family: 'Hahmlet', serif;
+  min-height: 70vh;
+  font-family: "Hahmlet", serif;
   font-weight: 100;
 }
 
@@ -170,11 +171,12 @@ footer {
 }
 
 .copyright-div .copyright {
-  font-family: 'Hahmlet', serif;
+  font-family: "Hahmlet", serif;
   font-weight: 400;
 }
 
 .main-about {
+  height: 100vh;
   max-width: 1000px;
   margin: auto;
   display: -webkit-box;
@@ -184,9 +186,11 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 10vh;
-  margin-bottom: 10vh;
   text-align: center;
+}
+
+.main-about .main-about-title {
+  margin-top: 20vh;
 }
 
 .main-about .main-about-title span {
@@ -194,6 +198,51 @@ footer {
 }
 
 .main-about p {
+  margin: 2em 10em;
+}
+
+.work-about {
+  height: 35vh;
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.work-about .work-about-title span {
+  font-size: 2em;
+}
+
+.work-about p {
+  margin: 2em 10em;
+}
+
+.contact-about {
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.contact-about .contact-about-title span {
+  font-size: 2em;
+}
+
+.contact-about p {
   margin: 2em 10em;
 }
 
@@ -313,7 +362,7 @@ footer {
   outline: none;
   border-radius: 0.3rem;
   resize: none;
-  font-family: 'Hahmlet', serif;
+  font-family: "Hahmlet", serif;
   font-weight: 100;
 }
 
@@ -334,6 +383,12 @@ footer {
 
 @media screen and (min-width: 1080px) {
   .main-about p {
+    font-size: 1.2em;
+  }
+  .work-about p {
+    font-size: 1.2em;
+  }
+  .contact-about p {
     font-size: 1.2em;
   }
   .art-about {
@@ -362,11 +417,10 @@ footer {
 
 @media screen and (max-width: 768px) {
   .nav-list {
-    position: absolute;
-    right: 0px;
-    background-color: #e9e6dd;
-    height: 20rem;
-    top: -2rem;
+    margin-top: 10px;
+    margin-left: 0;
+  }
+  .main-nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -374,32 +428,15 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-    z-index: 10;
-    border-radius: 1rem;
-  }
-  .nav-list .exit {
-    display: block;
-    position: relative;
-    left: 10px;
-    top: 75px;
-    width: 25px;
-    height: 25px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     cursor: pointer;
   }
-  .nav-list .first-nav-li {
-    margin-top: 100px;
-  }
-  .nav-list li {
-    opacity: 0;
-    margin: 10px 75px 10px 10px;
-  }
-  .main-nav .burger {
-    display: block;
-    cursor: pointer;
-  }
-  .main-about p, .art-about p {
+  .main-about p,
+  .work-about p,
+  .contact-about p,
+  .art-about p {
     margin: 2em 4em;
     font-size: 0.8em;
   }
@@ -428,7 +465,14 @@ footer {
   .main-about p {
     margin: 1em 10px;
   }
-  .art-about p, .art-about h1 {
+  .work-about p {
+    margin: 1em 10px;
+  }
+  .contact-about p {
+    margin: 1em 10px;
+  }
+  .art-about p,
+  .art-about h1 {
     margin: 1em 10px;
   }
   .work-img {
@@ -436,44 +480,15 @@ footer {
   }
 }
 
-.nav-active {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
-}
-
-@-webkit-keyframes nav-li-fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes nav-li-fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes section-fade {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0.2;
-  }
-}
-
-@keyframes section-fade {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0.2;
+@media screen and (max-width: 240px) {
+  .nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 /*# sourceMappingURL=main.css.map */
