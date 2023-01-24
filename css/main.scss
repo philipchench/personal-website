@@ -218,6 +218,10 @@ footer {
   }
 }
 
+.work-extra-space {
+  margin-top: 2em;
+}
+
 .work-list {
   .work-item {
     display: flex;
@@ -355,6 +359,9 @@ footer {
   .work-text {
     max-width: 20em;
     font-size: 0.8em;
+  }
+  .work-extra-space {
+    margin-top: 5em;
   }
   .work-img {
     width: 275px;

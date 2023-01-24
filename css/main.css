@@ -289,6 +289,10 @@ footer {
   margin: 0 6em;
 }
 
+.work-extra-space {
+  margin-top: 2em;
+}
+
 .work-list .work-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -455,6 +459,9 @@ footer {
   .work-text {
     max-width: 20em;
     font-size: 0.8em;
+  }
+  .work-extra-space {
+    margin-top: 5em;
   }
   .work-img {
     width: 275px;
